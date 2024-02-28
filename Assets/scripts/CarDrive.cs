@@ -8,11 +8,19 @@ public class CarDrive : MonoBehaviour
     [SerializeField] private float _speed = 150f;
     [SerializeField] private float _rotationSpeed = 300f;
 
+    public ProjectileBehav projPrefab;
+    public Transform LaunchOffset;
+
     private float _moveInput;
 
     private void Update()
     {
         _moveInput = Input.GetAxisRaw("Horizontal");
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(projPrefab, LaunchOffset.position, transform.rotation);
+        }
     }
 
     private void FixedUpdate()

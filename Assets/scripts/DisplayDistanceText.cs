@@ -22,6 +22,6 @@ public class DisplayDistanceText : MonoBehaviour
             distance.x = 0;
         }
 
-        _distanceText.text = distance.x.ToString("F0") + " méter";
+        _distanceText.text = distance.x.ToString("F0") + " meter";
     }
 }
